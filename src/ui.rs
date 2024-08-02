@@ -195,8 +195,10 @@ impl LoggerUi {
                         let string_format = format!("[{}]: {}", level, string);
 
                         let response = match level {
-                            log::Level::Warn => ui.colored_label(Color32::YELLOW, string_format),
-                            log::Level::Error => ui.colored_label(Color32::RED, string_format),
+                            log::Level::Warn => {
+                                ui.colored_label(Color32::from_rgb(255, 115, 0), string_format)
+                            }
+                            log::Level::Error => ui.colored_label(Color32::DARK_RED, string_format),
                             _ => ui.label(string_format),
                         };
 

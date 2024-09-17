@@ -10,15 +10,13 @@ description = "log implementation for egui"
 categories = ["gui", "game-development", "development-tools::debugging"]
 include = ["src/*.rs", "Cargo.toml", "LICENSE"]
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
 log = "0.4"
-egui = "0.28"
+egui = { git = "https://github.com/emilk/egui/", rev = "f38515afe9c0b220c7a698566630c28d8f57b44f" }
 regex = "1.10"
 
 [dev-dependencies]
-eframe = "0.28"
+eframe = { git = "https://github.com/emilk/egui/", rev = "f38515afe9c0b220c7a698566630c28d8f57b44f" }
 multi_log = "0.1"
 env_logger = "0.11"
 
